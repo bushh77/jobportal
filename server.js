@@ -1,26 +1,24 @@
+
 import express from "express";
 import dotenv from "dotenv";
 import connectdb from "./db/dbconnect.js";
-
-
+import userrouter from './router/userroutes.js';
 const app = express();
-
-dotenv.config();
-connectdb();
-
+dotenv.config();//load env variables
+connectdb(); 
 //MIDDLEWARES
-app.get(express.json());
-app.get(express.urlencoded({extended:true}));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.get('/',(req,res)=>{
     res.status(200).send("server is running fine");
 })
 app.get('/api/home',(req,res)=>{
-    res.status(200).send("home page rout checking");
+    res.status(200).send("Home page route checking");
 })
-let port=process.env.port ||5051;
-app.listen(port,()=>{
-    console.log('server running on http://localhost:$port');
-    
-    
+//ROUTES
+app.use('/api',userrouter)
+let port=process.env.port || 5051;
+app.listen(port, () => {
+    console.log(`Server running on http://localhost:${port}`);
 });

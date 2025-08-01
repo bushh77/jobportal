@@ -1,4 +1,4 @@
-import jobsapplicationmodel from "../models/jobsapplication.js";
+import jobsapplicationmodel from "../models/jobsapplicationmodel.js";
 import jobmodel from "../models/jobsmodel.js";
 import usermodel from "../models/usermodel.js";
 

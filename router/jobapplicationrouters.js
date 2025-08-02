@@ -6,7 +6,6 @@ import {applyjob, deleteapplication, getapplicationofparticularjob, getapplicati
 
 router.post('/apply/:jobid/:userid',applyjob);
 router.get('/applications/:userid',getapplicationsoflogineduser);
-router.put('/updateapplication/:id',updateapplication);
-router.delete('/deleteapplication/:id',deleteapplication);
-
+router.put('/applications/:id',updateapplication);
+router.delete('/applications/:id',deleteapplication);
 export default router

@@ -1,7 +1,7 @@
 // utils/geminiClient.js
 import axios from 'axios';
 
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "your key";
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "AIzaSyAZEpWW8On0xROlsJy45FVKTL3Bq8a1aD4";
 // utils/geminiClient.js
 
 // Updated API URL with correct model name
